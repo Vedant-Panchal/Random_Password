@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="/index.js" defer></script>
+  </head>
+  <body
+    class="h-screen w-screen bg-emerald-950 flex justify-center items-center"
+  >
+    <div class="bg-emerald-900 w-fit h-fit rounded-xl shadow-2xl m-3">
+      <div class="flex-col justify-center items-center m-5 p-5">
+        <div>
+          <p class="mx-auto text-slate-100 font-bold text-5xl">
+            Generate a
+            <span class="text-green-400 break"><br />Random Password 🔒</span>
+          </p>
+          <p class="text-slate-300 font-medium mt-2 text-base">
+            Never use an insecure password again.
+          </p>
+        </div>
+        <div>
+          <hr class="h-0 mt-3 mb-3 text-red-500" />
+          <span class="text-slate-200 mt-2 font-bold text-xl"
+            >Enter password length</span
+          >
+          <div
+            class="px-4 py-2 bg-emerald-500/50 mt-2 rounded-lg flex justify-between shadow-lg"
+          >
+            <button
+              class="text-2xl w-full text-slate-300 font-extrabold"
+              id="minus"
+            >
+              -
+            </button>
+            <input
+              type="text"
+              name="number"
+              id="numberInput"
+              class="bg-transparent text-center w-full focus:outline-none placeholder:text-slate-300 placeholder:font-medium font-medium text-slate-100 border-x-2 border-slate-400"
+              min="8"
+              max="15"
+              value="8"
+            />
+            <button
+              class="text-2xl w-full text-slate-300 font-extrabold"
+              id="plus"
+            >
+              +
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-3">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label
+                class="inline-block hover:cursor-pointer text-slate-200 font-semibold mr-3"
+                for="flexSwitchCheckDefault"
+                >Uppercase letters
+              </label>
+              <input
+                class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-teal-200 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-teal-800 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-teal-200 checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-teal-500 checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-teal-200 checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s]"
+                type="checkbox"
+                role="switch"
+                id="uppercase"
+              />
+            </div>
+            <div class="flex justify-between items-center">
+              <label
+                class="inline-block hover:cursor-pointer text-slate-200 font-semibold mr-3"
+                for="flexSwitchCheckDefault"
+                >Include Numbers
+              </label>
+              <input
+                class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-teal-200 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-teal-800 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-teal-200 checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-teal-500 checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-teal-200 checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s]"
+                type="checkbox"
+                role="switch"
+                id="includeNums"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label
+                class="inline-block hover:cursor-pointer text-slate-200 font-semibold mr-3"
+                for="flexSwitchCheckDefault"
+                >Lowercase letters
+              </label>
+              <input
+                class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-teal-200 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-teal-800 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-teal-200 checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-teal-500 checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-teal-200 checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s]"
+                type="checkbox"
+                role="switch"
+                id="lowercase"
+              />
+            </div>
+            <div class="flex justify-between items-center">
+              <label
+                class="inline-block hover:cursor-pointer text-slate-200 font-semibold"
+                for="flexSwitchCheckDefault"
+                >Include Symbols
+              </label>
+              <input
+                class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-teal-200 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-teal-800 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-teal-200 checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-teal-500 checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-teal-200 checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s]"
+                type="checkbox"
+                role="switch"
+                id="includeSymbols"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mt-10">
+          <button
+            class="bg-teal-200 px-4 py-2 rounded-lg font-semibold text-center text-emerald-950 transition-all hover:bg-emerald-950 hover:text-teal-200 focus:outline-none focus:ring-2 focus:ring-teal-300 w-full"
+            id="generatePass"
+          >
+            Generate Passwords
+          </button>
+          <button
+            class="bg-teal-200 px-4 py-2 mt-3 rounded-lg font-semibold text-center text-emerald-950 transition-all hover:bg-emerald-950 hover:text-teal-200 focus:outline-none focus:ring-2 focus:ring-teal-300 w-full"
+            id="clear"
+          >
+            Clear
+          </button>
+        </div>
+        <div>
+          <hr class="h-0 mt-3" />
+        </div>
+        <div
+          class="bg-emerald-950 h-10 rounded-md w-full mt-3 px-2 py-2 flex justify-between items-center copyIcon"
+        >
+          <div class="pass text-slate-200 font-bold text-xl"></div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            class="w-6 h-6 ml-auto hover:stroke-teal-500 stroke-emerald-600 copyIcon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
