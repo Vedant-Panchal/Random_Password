@@ -1,2 +1,2 @@
 # Random_Password
-Link to the website [https://random-password-gen2.vercel.app/](url)
+Link to the website [Random Password](https://random-password-gen2.vercel.app/)
